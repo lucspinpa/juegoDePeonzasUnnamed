@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b3jcu1jvtm787"]
+
+[ext_resource type="PackedScene" uid="uid://yoe0nhk6otqr" path="res://02_scenes/characters/player.tscn" id="1_xrvtp"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_8w0r3"]
+top_radius = 20.0
+height = 1.0
+
+[node name="LevelTest" type="Node3D" unique_id=220644786]
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=2113969905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04362631, -0.5411892, 0.013408661)
+mesh = SubResource("CylinderMesh_8w0r3")
+
+[node name="Player" parent="." unique_id=1547781893 instance=ExtResource("1_xrvtp")]
