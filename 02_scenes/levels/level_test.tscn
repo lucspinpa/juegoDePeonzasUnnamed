@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b3jcu1jvtm787"]
 
+[ext_resource type="PackedScene" uid="uid://cqun10cfvknx1" path="res://02_scenes/camera.tscn" id="1_c1k7g"]
 [ext_resource type="PackedScene" uid="uid://yoe0nhk6otqr" path="res://02_scenes/characters/player.tscn" id="1_xrvtp"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_8w0r3"]
@@ -8,8 +9,14 @@ height = 1.0
 
 [node name="LevelTest" type="Node3D" unique_id=220644786]
 
+[node name="Camera" parent="." unique_id=38696059 instance=ExtResource("1_c1k7g")]
+transform = Transform3D(0.9835758, -0.15519358, 0.09216117, -0.017974973, 0.42384177, 0.9055579, -0.17959853, -0.8923414, 0.4140909, 3.5129623, 13.075834, 12.139313)
+
 [node name="Floor" type="MeshInstance3D" parent="." unique_id=2113969905]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04362631, -0.5411892, 0.013408661)
 mesh = SubResource("CylinderMesh_8w0r3")
 
 [node name="Player" parent="." unique_id=1547781893 instance=ExtResource("1_xrvtp")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=678929475]
+transform = Transform3D(1, 0, 0, 0, -0.3032724, 0.95290387, 0, -0.95290387, -0.3032724, 0, 16.429504, -0.76667404)
