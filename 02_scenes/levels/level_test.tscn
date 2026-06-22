@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cqun10cfvknx1" path="res://02_scenes/camera.tscn" id="1_c1k7g"]
 [ext_resource type="PackedScene" uid="uid://yoe0nhk6otqr" path="res://02_scenes/characters/player.tscn" id="1_xrvtp"]
+[ext_resource type="PackedScene" uid="uid://b8kbrhmg0nvr0" path="res://02_scenes/props/arena.tscn" id="3_qxxlh"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_8w0r3"]
 top_radius = 20.0
@@ -20,3 +21,5 @@ mesh = SubResource("CylinderMesh_8w0r3")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=678929475]
 transform = Transform3D(1, 0, 0, 0, -0.3032724, 0.95290387, 0, -0.95290387, -0.3032724, 0, 16.429504, -0.76667404)
+
+[node name="Arena" parent="." unique_id=39469501 instance=ExtResource("3_qxxlh")]
