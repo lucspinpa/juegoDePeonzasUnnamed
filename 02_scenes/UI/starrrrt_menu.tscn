@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://ok16wf2qch7n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vx3rh"]
+bg_color = Color(0.44705883, 0.6862745, 0.84313726, 1)
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_snedh"]
+bg_color = Color(0.6509804, 0.83137256, 0.8862745, 1)
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6x5k"]
+bg_color = Color(0.6509804, 0.83137256, 0.8862745, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.6509804, 0.83137256, 0.8862745, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+corner_detail = 20
+
+[node name="starrrrt_menu" type="Control" unique_id=1100661659]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel4" type="Panel" parent="." unique_id=216056836]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vx3rh")
+
+[node name="Panel5" type="Panel" parent="." unique_id=810227260]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 441.0
+offset_top = 419.0
+offset_right = -583.0
+offset_bottom = -161.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_snedh")
+
+[node name="Panel" type="Panel" parent="." unique_id=188642789]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 440.0
+offset_top = 313.0
+offset_right = -417.0
+offset_bottom = -267.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_snedh")
+
+[node name="Panel2" type="Panel" parent="." unique_id=971802398]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.043402776
+anchor_top = 0.5138889
+anchor_right = 0.2717014
+anchor_bottom = 0.88271606
+offset_left = -8.0
+offset_top = -15.0
+offset_right = -8.0
+offset_bottom = -15.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_x6x5k")
+
+[node name="Panel3" type="Panel" parent="." unique_id=733774863]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7473958
+anchor_top = 0.47222218
+anchor_right = 0.9756944
+anchor_bottom = 0.8410494
+offset_top = 12.0000305
+offset_bottom = 12.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_x6x5k")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="." unique_id=1488501771]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 143.0
+offset_right = 655.0
+offset_bottom = 166.0
+text = "NOMBRE DEL JUEGO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel6" type="Panel" parent="." unique_id=422943937]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 612.0
+offset_top = 419.0
+offset_right = -412.0
+offset_bottom = -161.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_snedh")
