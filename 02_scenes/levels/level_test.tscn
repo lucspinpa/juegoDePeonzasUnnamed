@@ -4,22 +4,16 @@
 [ext_resource type="PackedScene" uid="uid://yoe0nhk6otqr" path="res://02_scenes/characters/player.tscn" id="1_xrvtp"]
 [ext_resource type="PackedScene" uid="uid://b8kbrhmg0nvr0" path="res://02_scenes/props/arena.tscn" id="3_qxxlh"]
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_8w0r3"]
-top_radius = 20.0
-height = 1.0
-
 [node name="LevelTest" type="Node3D" unique_id=220644786]
 
 [node name="Camera" parent="." unique_id=38696059 instance=ExtResource("1_c1k7g")]
-transform = Transform3D(0.9835758, -0.15519358, 0.09216117, -0.017974973, 0.42384177, 0.9055579, -0.17959853, -0.8923414, 0.4140909, 3.5129623, 13.075834, 12.139313)
-
-[node name="Floor" type="MeshInstance3D" parent="." unique_id=2113969905]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04362631, -0.5411892, 0.013408661)
-mesh = SubResource("CylinderMesh_8w0r3")
+transform = Transform3D(1, 0, 0, 0, 0.7660445, 0.64278764, 0, -0.64278764, 0.7660445, 0, 5.2172713, 6.2831573)
+fov = 35.0
 
 [node name="Player" parent="." unique_id=1547781893 instance=ExtResource("1_xrvtp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11921644, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=678929475]
 transform = Transform3D(1, 0, 0, 0, -0.3032724, 0.95290387, 0, -0.95290387, -0.3032724, 0, 16.429504, -0.76667404)
 
-[node name="Arena" parent="." unique_id=39469501 instance=ExtResource("3_qxxlh")]
+[node name="Arena" parent="." unique_id=2010050907 instance=ExtResource("3_qxxlh")]
