@@ -11,7 +11,7 @@ transform = Transform3D(1, 0, 0, 0, 0.7660445, 0.64278764, 0, -0.64278764, 0.766
 fov = 35.0
 
 [node name="Player" parent="." unique_id=1547781893 instance=ExtResource("1_xrvtp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11921644, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.026437253, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=678929475]
 transform = Transform3D(1, 0, 0, 0, -0.3032724, 0.95290387, 0, -0.95290387, -0.3032724, 0, 16.429504, -0.76667404)

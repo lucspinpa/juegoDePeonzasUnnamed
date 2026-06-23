@@ -1,13 +1,11 @@
 [gd_scene format=3 uid="uid://yoe0nhk6otqr"]
 
 [ext_resource type="Script" uid="uid://baq7107d385k2" path="res://02_scenes/characters/player.gd" id="1_ci6v7"]
+[ext_resource type="PackedScene" uid="uid://vckxsxj04yj" path="res://01_assets/characters/player/player.glb" id="2_wkqic"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8w0r3"]
 radius = 0.175
 height = 0.35
-
-[sub_resource type="BoxMesh" id="BoxMesh_8w0r3"]
-size = Vector3(0.3, 0.3, 0.3)
 
 [node name="Player" type="CharacterBody3D" unique_id=1547781893]
 script = ExtResource("1_ci6v7")
@@ -16,5 +14,5 @@ script = ExtResource("1_ci6v7")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.175, 0)
 shape = SubResource("CapsuleShape3D_8w0r3")
 
-[node name="Mesh" type="MeshInstance3D" parent="Collision" unique_id=1324091318]
-mesh = SubResource("BoxMesh_8w0r3")
+[node name="Mesh" parent="Collision" unique_id=318856799 instance=ExtResource("2_wkqic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.175, 0)
