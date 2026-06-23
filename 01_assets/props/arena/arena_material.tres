@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://xqcjm124hyol"]
+
+[ext_resource type="Shader" uid="uid://bqkeiogv8pbpg" path="res://01_assets/props/arena/arena_shader.tres" id="1_saffr"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_saffr")
