@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cmmn0tr1wy7d8"]
+
+[ext_resource type="Shader" uid="uid://btx7tjce3n2bs" path="res://01_assets/characters/player/player_shader.tres" id="1_npcw5"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_npcw5")
