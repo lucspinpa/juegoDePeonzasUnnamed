@@ -5,8 +5,8 @@ extends CharacterBody3D
 var target_array:Array
 var current_target
 
-var base_speed:float = 50
-var base_acceleration:float = 5
+var speed:float = 50
+var acceleration:float = 5
 
 func _ready():
 	# Find player entity.
@@ -14,7 +14,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	velocity = position.direction_to(current_target.position) * base_speed * delta
+	velocity = position.direction_to(current_target.position).normalized() * speed * delta
+	
+	var rotation_multiplier = clamp(
+		((abs(velocity.x) + abs(velocity.z)) / 100),
+		0.0, 1.0)
+	mesh.rotation.y += 9 * rotation_multiplier
 	
 	move_and_slide()
 
