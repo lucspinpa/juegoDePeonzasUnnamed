@@ -14,7 +14,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	velocity = position.direction_to(current_target.position).normalized() * speed * delta
+	velocity = Vector3(position.direction_to(current_target.position).normalized().x,
+		0,
+		position.direction_to(current_target.position).normalized().z) * speed * delta
 	
 	var rotation_multiplier = clamp(
 		((abs(velocity.x) + abs(velocity.z)) / 100),
