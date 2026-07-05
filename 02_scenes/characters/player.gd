@@ -4,32 +4,25 @@ extends CharacterBody3D
 
 const JUMP_VELOCITY = 4.5
 
-var speed = 200.0
+var max_speed = 2.0
+var acceleration = 5.0
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("left", "right", "up", "down")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * speed * delta
-		velocity.z = direction.z * speed * delta
+	if input_dir:
+		# If there is an input, calculate velocity.
+		# Adds acceleration to the current velocity each frame. Clamps it not to exceed max speed.
+		velocity.x = clamp(velocity.x + acceleration * delta * input_dir.x, -max_speed, max_speed)
+		velocity.z = clamp(velocity.z + acceleration * delta * input_dir.y, -max_speed, max_speed)
 	else:
-		velocity.x = move_toward(velocity.x, 0, speed)
-		velocity.z = move_toward(velocity.z, 0, speed)
+		velocity.x = move_toward(velocity.x, 0, acceleration * delta)
+		velocity.z = move_toward(velocity.z, 0, acceleration * delta)
 
 	var rotation_multiplier = clamp(
 			((abs(velocity.x) + abs(velocity.z)) / 100),
 			0.0, 1.0)
 	mesh.rotation.y += 9 * rotation_multiplier
-
 
 	move_and_slide()
