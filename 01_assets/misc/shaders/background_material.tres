@@ -1,9 +1,0 @@
-[gd_resource type="ShaderMaterial" format=3 uid="uid://b7hotokekj0na"]
-
-[ext_resource type="Shader" uid="uid://bl8xbx6ewndca" path="res://01_assets/misc/shaders/background_shader.tres" id="1_nhen8"]
-
-[resource]
-render_priority = 0
-shader = ExtResource("1_nhen8")
-shader_parameter/ColorA = Color(0.203922, 0.243137, 1, 1)
-shader_parameter/ColorA2 = Color(0.6336, 0.72, 0.67824, 1)
