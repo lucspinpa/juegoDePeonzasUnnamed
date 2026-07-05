@@ -23,6 +23,7 @@ fov = 35.0
 
 [node name="Player" parent="." unique_id=1547781893 instance=ExtResource("1_xrvtp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.026437253, 0)
+max_count = 10
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=678929475]
 transform = Transform3D(0.9135454, 0.2705736, -0.3036851, 0, 0.74663824, 0.66523033, 0.40673664, -0.60771817, 0.6820879, 0, 16.429504, -0.76667404)
